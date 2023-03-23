@@ -58,6 +58,10 @@ const Section: React.FC<
   );
 };
 
+// có 2 cách update
+// một là tự động update bằng cách wrap project với codepush và options của nó
+// 2 là thông báo bằng cách đặt biến setupCodePush và useEffect
+
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
 const App = () => {
@@ -68,8 +72,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    setupCodePush();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // setupCodePush();
   }, []);
 
   const setupCodePush = () => {
@@ -176,7 +179,8 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> ngo hoang anh
+            Edit <Text style={styles.highlight}>App.tsx</Text> ngo hoang
+            anhsdasdasdsadas
           </Section>
           {/* <Section title="See Your Changes">
             <ReloadInstructions />
