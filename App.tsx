@@ -68,7 +68,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    // setupCodePush();
+    setupCodePush();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
